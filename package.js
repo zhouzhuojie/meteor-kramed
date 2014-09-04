@@ -1,6 +1,6 @@
 Package.describe({
   summary: "A markdown (kramdown compatible) parser and compiler.",
-  version: "0.1.0",
+  version: "0.1.1",
   git: "https://github.com/zhouzhuojie/meteor-kramed.git",
   name: "rexzh0u:kramed"
 });
