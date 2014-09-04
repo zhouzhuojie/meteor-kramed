@@ -1,0 +1,3 @@
+[submodule "kramed"]
+	path = kramed
+	url = https://github.com/GitbookIO/kramed.git
