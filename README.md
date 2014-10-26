@@ -11,9 +11,9 @@ meteor add rexzh0u:kramed
 
 By default, kramed supports Mathjax, if you want to enable `katex` support, do the following:
 
-`rexzh0u:kramed` has a weak dependency on `sashko:katex`:
+`rexzh0u:kramed` has a weak dependency on `simple:katex`:
 ```
-meteor add sashko:katex
+meteor add simple:katex
 ```
 
 then, enable katex by turning on the option:
