@@ -5,10 +5,18 @@ if (typeof Package !== "undefined") {
 if (typeof katex !== "undefined") {
     kramed.Renderer.prototype.math = function(content, language, display) {
         if (kramed.defaults.katex) {
+            var maths;
+            try {
+                maths = katex.renderToString(content);
+            }
+            catch(e) {
+                maths = '<span style="color: red; border: 1px solid red;">Katex Error</span>';
+
+            }
             if (display) {
-                return '<div style="text-align: center">' + katex.renderToString(content) + '</div>';
+                return '<div style="text-align: center">' + maths + '</div>';
             } else {
-                return katex.renderToString(content);
+                return maths;
             }
         } else {
             mode = display ? '; mode=display' : '';

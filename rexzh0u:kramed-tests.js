@@ -22,3 +22,12 @@ Tinytest.add('kramed supports katex', function (test) {
         test.equal(kramed('$$sin(x)$$'), '<div style="text-align: center"><span class="katex"><span class="katex-inner"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></div>');
     }
 });
+
+Tinytest.add('kramed supports katex error', function (test) {
+    kramed.options({
+        katex: true
+    })
+    if (typeof katex !== "undefined") {
+        test.equal(kramed('$1_^_^_^$'), '<p><span style="color: red; border: 1px solid red;">Katex Error</span></p>\n');
+    }
+});
