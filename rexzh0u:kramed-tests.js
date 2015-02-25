@@ -7,6 +7,9 @@ Tinytest.add('kramed supports markdown', function (test) {
 });
 
 Tinytest.add('kramed supports math', function (test) {
+    kramed.options({
+        katex: false
+    })
     test.equal(kramed('$sin(x)$'), '<p><script type="math/tex">sin(x)</script></p>\n');
 });
 
